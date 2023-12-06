@@ -14,6 +14,17 @@ export default defineConfig((configEnv) => {
       globals: true,
       environment: "happy-dom",
       setupFiles: "./src/infrastructure/tests.setup.ts",
+      coverageConfig: {
+        include: ["src/**/*.{ts,tsx}"],
+        exclude: ["src/**/*.test.{ts,tsx}"],
+        threshold: {
+          statements: 80,
+          branches: 80,
+          functions: 80,
+          lines: 80,
+        },
+        reporter: ['text', 'json-summary', 'json']
+      }
     },
     resolve: {
       alias: {
