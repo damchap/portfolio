@@ -1,36 +1,38 @@
-import { forwardRef, ComponentProps } from "react";
+import {ButtonHTMLAttributes} from "react";
 
-const NavButton = forwardRef<
-    HTMLButtonElement,
-    Omit<ComponentProps<"button">, "className">
->(({ children, ...rest }, ref) => {
+interface NavButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    children: React.ReactNode,
+    className?: string,
+    ref?: React.LegacyRef<HTMLButtonElement> | undefined
+}
+
+const NavButton: React.FC<NavButtonProps> = ({ children, className, ref, ...rest }) => {
     return <button
         ref={ref}
-        className="
-            group
-            w-full
-            sm:w-auto
-            flex-none
-            hover:scale-105
-            text-black
-            text-lg
-            leading-6
-            font-semibold
-            py-3 px-3
-            border-2
-            rounded-xl
-            focus:ring-2
-            focus:ring-offset-2
-            focus:ring-offset-white
-            focus:ring-gray-900
-            focus:outline-none
-            transition-colors
-            duration-1000
-        "
+        className={"group\n" +
+
+            "            sm:w-auto\n" +
+            "            flex-none\n" +
+            "            hover:scale-105\n" +
+            "            text-black\n" +
+            "            text-lg\n" +
+            "            leading-6\n" +
+            "            font-semibold\n" +
+            "            py-3 px-3\n" +
+            "            border-2\n" +
+            "            rounded-xl\n" +
+            "            focus:ring-2\n" +
+            "            focus:ring-offset-2\n" +
+            "            focus:ring-offset-white\n" +
+            "            focus:ring-gray-900\n" +
+            "            focus:outline-none\n" +
+            "            transition-colors\n" +
+            "            duration-1000" + className
+        }
         {...rest}
     >
         {children}
     </button>
-});
+};
 
 export default NavButton;
