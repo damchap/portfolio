@@ -1,4 +1,4 @@
-import {ButtonHTMLAttributes} from "react";
+import React, {ButtonHTMLAttributes} from "react";
 
 interface NavButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode,
