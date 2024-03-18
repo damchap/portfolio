@@ -10,6 +10,11 @@ import Composer from "components/atoms/logos/composer.tsx";
 import Pnpm from "components/atoms/logos/pnpm.tsx";
 import Damchap from "components/atoms/logos/damchap.tsx";
 import Dev from "components/atoms/logos/dev.tsx"
+import LogoDev from "components/atoms/logos/logodev.tsx";
+import Instagram from "components/atoms/logos/instagram.tsx";
+import Twitter from "components/atoms/logos/twitter.tsx";
+import Linkedin from "components/atoms/logos/linkedin.tsx";
+
 
 export interface LogosProps {
   width?: number | string;
@@ -29,7 +34,11 @@ const Logos = {
   Composer,
   Pnpm,
   Damchap,
-  Dev
+  Dev,
+  LogoDev,
+  Instagram,
+  Twitter,
+  Linkedin,
 };
 
 export default Logos;

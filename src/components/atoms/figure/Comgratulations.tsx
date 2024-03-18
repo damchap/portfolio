@@ -1,6 +1,6 @@
 import { LogosProps } from "components/atoms/logos";
 
-const Comgratulations = (props: LogosProps): JSX.Element => {
+const Congratulations = (props: LogosProps): JSX.Element => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="104" height="104" viewBox="0 0 104 104" fill="none" {...props}>
             <path fillRule="evenodd" clipRule="evenodd"
@@ -10,4 +10,4 @@ const Comgratulations = (props: LogosProps): JSX.Element => {
 
     )
 }
-export default Comgratulations;
+export default Congratulations;
