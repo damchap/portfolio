@@ -1,8 +1,9 @@
 import Logos from "components/atoms/logos";
+import NavButton from "components/atoms/navButton";
 import Button from "components/atoms/button";
 import Figure from "components/atoms/figure";
-import Navbar from "components/organisms/navbar";
 
+const namePage = "";
 
 const date = new Date().getFullYear();
 function App() {
@@ -11,7 +12,29 @@ function App() {
                 {/*  notif */}
             </div>
             <header className="flex flex-col justify-between mx-auto max-w-5xl px-4 landscape xl:max-w-screen-2xl  ">
-                <Navbar/>
+                <nav className="flex items-center justify-between py-10">
+                    <div className="flex items-center justify-between py-4">
+                        <a aria-label="Portfolio" href="/" className="font-black ">@damchap/ {namePage}</a>
+                    </div>
+                    <div className="flex items-center justify-between  space-x-2">
+
+                        <div className="hidden lg:block">
+                            <a aria-label="About" href="/about"
+                               className="link-underline rounded-t py-1 px-2 text-gray-900 hover:bg-gray-200   sm:py-2 sm:px-3">about</a>
+                            <a aria-label="Projects" href="/projects"
+                               className="link-underline rounded-t py-1 px-2 text-gray-900 hover:bg-gray-200   sm:py-2 sm:px-3">projects</a>
+                            <a aria-label="Contact" href="/contact"
+                               className="link-underline rounded-t py-1 px-2 text-gray-900 hover:bg-gray-200   sm:py-2 sm:px-3">contact</a>
+                        </div>
+                        <NavButton className="py-2"><Logos.Github
+                            className="w-6 h-6 group-hover:animate-spin transition-all duration-200 ease-in-out "/></NavButton>
+                        <NavButton className="py-2"><Logos.Desktop
+                            className="w-6 h-6 group-hover:animate-spin transition-all duration-200 ease-in-out "/></NavButton>
+                        <NavButton className="py-2"><Logos.Menu
+                            className="w-6 h-6 group-hover transition-all duration-200 ease-in-out "/></NavButton>
+                    </div>
+
+                </nav>
                 <div className="flex-grow py-16">
                     <div className="flex flex-col justify-center text-center items-center">
                         <span className="text-xl font-bold text-primary">Hello! 👋 I'm </span>
@@ -28,7 +51,7 @@ function App() {
                                     <a>me contacter</a>
                                 </div>
                             </Button>
-                            <Button outline={true} className={"w-full sm:w-auto flex items-center justify-center bg-transparent hover:bg-primary text-primary hover:text-white border-primary border-2 text-lg leading-6 font-semibold py-3 px-6 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
+                            <Button outline={true} className={"w-full sm:w-auto flex-none bg-transparent hover:bg-primary text-primary hover:text-white border-primary border-2 text-lg leading-6 font-semibold py-3 px-6 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
                                 <div className={"uppercase tracking-wide font-bold flex flex-grow space-x-2"}>
                                     <span>Github</span>
                                     <Logos.Github
@@ -45,13 +68,13 @@ function App() {
                     <div className={"w-full"}>
                         <h2 className="text-4xl font-black pb-8">🤖 Qui suis-je </h2>
                     </div>
-                    <div className={"flex flex-col lg:flex-row items-center space-x-0 space-y-8 lg:space-y-0 lg:space-x-12 lg:max-w-6xl"}>
-                        <div className={"lg:w-1/3"}>
+                    <div className={"flex flex-col lg:flex-grow items-center space-x-0 space-y-8 lg:space-y-0 lg:space-x-12 max-w-6xl"}>
+                        <div className={"w-1/3"}>
                             <img
                                 className="w-96 h-96 object-cover object-top"
                                 src="/damien_chapart.png" alt="Damien Chapart"/>
                         </div>
-                        <div className={"lg:w-2/3 flex flex-col justify-center"}>
+                        <div className={"w-2/3 flex flex-col justify-center"}>
                             <div className={""}>
                                 <span className={"text-4xl font-extrabold"}>Damien Chapart</span>
                                 <h3 className={"text-xl font-bold tracking-wide pb-6"}>Etudiant en licence pro et
@@ -67,7 +90,7 @@ function App() {
                                     in working with diverse programming languages and frameworks, and I am always eager
                                     to learn more.
                                 </p>
-                                <Button outline={true} className={"w-full sm:w-auto flex justify-center items-center bg-transparent hover:bg-primary text-primary hover:text-white border-primary border-2 text-lg leading-6 font-semibold py-3 px-6 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
+                                <Button outline={true} className={"w-full sm:w-auto flex-none bg-transparent hover:bg-primary text-primary hover:text-white border-primary border-2 text-lg leading-6 font-semibold py-3 px-6 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
                                     <div className={"uppercase tracking-wide font-bold"}>
                                         En savoir plus
                                     </div>
@@ -81,9 +104,9 @@ function App() {
                     <div className={"w-full"}>
                         <h2 className="text-4xl font-black pb-8">🚀 Mes projets</h2>
                     </div>
-                    <div className={"flex flex-col items-center sm:flex-row lg:space-x-12 lg:max-w-6xl"}>
-                        <div className={"w-full lg:w-1/3 flex flex-col justify-center"}>
-                            <div className={"w-full h-[330px] bg-gray-100  flex items-center justify-center rounded-xl border-1 border-transparent gap-1 bg-gray-500 bg-opacity-10 mb-2"}>
+                    <div className={"flex flex-col items-center sm:flex-grow lg:space-x-12 max-w-6xl"}>
+                        <div className={"w-3/4 lg:w-1/3 flex flex-col justify-center"}>
+                            <div className={"w-full min-w-80 h-[330px] bg-gray-100  flex items-center justify-center rounded-xl border-1 border-transparent gap-1 bg-gray-500 bg-opacity-10 mb-2"}>
                                 <svg width="158" height="152" viewBox="0 0 158 152" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_916_858)">
@@ -111,19 +134,19 @@ function App() {
                                 </svg>
                             </div>
                         </div>
-                        <div className={"lg:w-2/3 flex flex-col justify-center"}>
+                        <div className={"w-2/3 flex flex-col justify-center"}>
                             <div className={""}>
-                                <div className={"flex items-center pb-8 justify-between"}>
+                                <div className={"flex items-center pb-8 space-x-10"}>
                                     <div>
                                         <h3 className={"text-xl  lg:text-4xl  font-extrabold"}>Assistant Clevguard</h3>
                                         <span className={" font-light text-secondary "}>2019 - 2020</span>
                                     </div>
                                     <div className={"flex space-x-4 border-1 border-b-gray-200s p-2 rounded-full"}>
-                                        <Logos.Cpp className={"w-7 h-7 lg:w-10 lg:w-10"}/>
-                                        <Logos.Arduino className={"w-7 h-7 lg:w-10 lg:w-10"}/>
-                                        <Logos.RaspberryPi className={"w-7 h-7 lg:w-10 lg:w-10"}/>
-                                        <Logos.Php className={"w-7 h-7 lg:w-10 lg:w-10"}/>
-                                        <Logos.Composer className={"w-7 h-7 lg:w-10 lg:w-10"}/>
+                                        <Logos.Cpp className={"w-10 h-10"}/>
+                                        <Logos.Arduino className={"w-10 h-10"}/>
+                                        <Logos.RaspberryPi className={"w-10 h-10"}/>
+                                        <Logos.Php className={"w-10 h-10"}/>
+                                        <Logos.Composer className={"w-10 h-10"}/>
                                     </div>
                                 </div>
                                 <p className={"text-secondary pb-8"}>
@@ -150,7 +173,8 @@ function App() {
                     <div className={"w-full"}>
                         <h2 className="text-4xl font-black pb-8">🖋️Article récents</h2>
                     </div>
-                    <div>
+                    <div >
+
                         <div className={""}>
                             <span className={" font-light text-secondary "}>19 février 2023</span>
                         </div>
@@ -159,8 +183,8 @@ function App() {
                         <a className="group my-4 flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-101 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
                            href="/blog/core-web-vitals">
                             <li className="py-4">
-                                <article className={"flex justify-start space-x-8"}>
-                                    <div className={"hidden sm:flex sm:flex-col sm:justify-center"}>
+                                <article className={"flex flex-grow justify-start space-x-8"}>
+                                    <div className={"flex flex-col justify-center"}>
                                         <Figure.Congratulations className={"w-24 h-24"}/>
                                     </div>
                                     <div
@@ -183,7 +207,7 @@ function App() {
                                                 </div>
                                                 <div className={"flex space-x-3"}>
                                                     <Button outline={true}
-                                                            className={"flex bg-transparent hover:bg-secondary text-secondary hover:text-white border-secondary border-2 text-lg leading-6 font-semibold py-2 px-4 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
+                                                            className={"w-full sm:w-auto flex-none bg-transparent hover:bg-secondary text-secondary hover:text-white border-secondary border-2 text-lg leading-6 font-semibold py-2 px-4 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
                                                         <div
                                                             className={"uppercase tracking-wide font-bold text-xs flex flex-grow space-x-2"}>
                                                             <Logos.Github
@@ -192,7 +216,7 @@ function App() {
                                                         </div>
                                                     </Button>
                                                     <Button outline={true}
-                                                            className={"flex bg-transparent hover:bg-secondary text-secondary hover:text-white border-secondary border-2 text-lg leading-6 font-semibold py-2 px-4 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
+                                                            className={"w-full sm:w-auto flex-none bg-transparent hover:bg-secondary text-secondary hover:text-white border-secondary border-2 text-lg leading-6 font-semibold py-2 px-4 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
                                                         <div
                                                             className={"uppercase tracking-wide font-bold text-xs flex flex-grow space-x-2"}>
                                                             <Logos.Pnpm
@@ -218,7 +242,7 @@ function App() {
                            href="/blog/core-web-vitals">
                             <li className="py-4">
                                 <article className={"flex flex-grow justify-start space-x-8"}>
-                                    <div className={"hidden sm:flex sm:flex-col sm:justify-center"}>
+                                    <div className={"flex flex-col justify-center"}>
                                         <Figure.CodingScript className={"w-24 h-24"}/>
                                     </div>
                                     <div
@@ -241,7 +265,7 @@ function App() {
                                                 </div>
                                                 <div className={"flex space-x-3"}>
                                                     <Button outline={true}
-                                                            className={"flex bg-transparent hover:bg-secondary text-secondary hover:text-white border-secondary border-2 text-lg leading-6 font-semibold py-2 px-4 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
+                                                            className={"w-full sm:w-auto flex-none bg-transparent hover:bg-secondary text-secondary hover:text-white border-secondary border-2 text-lg leading-6 font-semibold py-2 px-4 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
                                                         <div
                                                             className={"uppercase tracking-wide font-bold text-xs flex flex-grow space-x-2"}>
                                                             <Logos.Github
@@ -250,7 +274,7 @@ function App() {
                                                         </div>
                                                     </Button>
                                                     <Button outline={true}
-                                                            className={" bg-transparent hover:bg-secondary text-secondary hover:text-white border-secondary border-2 text-lg leading-6 font-semibold py-2 px-4 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
+                                                            className={"w-full sm:w-auto flex-none bg-transparent hover:bg-secondary text-secondary hover:text-white border-secondary border-2 text-lg leading-6 font-semibold py-2 px-4 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
                                                         <div
                                                             className={"uppercase tracking-wide font-bold text-xs flex flex-grow space-x-2"}>
                                                             <Logos.Pnpm
@@ -276,7 +300,7 @@ function App() {
                     <div className={"w-full"}>
                         <h2 className="text-4xl font-black pb-8">🖋️ Les autres project</h2>
                     </div>
-                    <div className={"flex-wrap space-y-7  gap-16 grid-cols-2 justify-center lg:mx-10"}>
+                    <div className={"grid gap-16 grid-cols-2 justify-center mx-10"}>
                         <div className={"w-full flex flex-col  justify-center"}>
                             <div
                                 className={"w-full h-[330px] bg-gray-100  flex items-center justify-center rounded-xl border-1 border-transparent gap-1 bg-emerald-700 bg-opacity-10 mb-2"}>
@@ -557,14 +581,14 @@ function App() {
                     </div>
                 </section>
             </main>
-            <footer className="mx-auto max-w-5xl px-4 xl:max-w-7xl xl:px-0 flex flex-col-reverse sm:flex-row justify-between  mt-32 mb-2">
-                <div className={"flex flex-col font space-y-2 lg:w-2/5"}>
+            <footer className="mx-auto max-w-5xl px-4 xl:max-w-7xl xl:px-0 flex flex-col  mt-32">
+                <div className={"flex flex-col font space-y-2 lg:w-1/3"}>
                     <Logos.Damchap className={"w-10 h-10"}/>
                     <span className={"font-black text-xl m-0"}>Damien Chapart</span>
                     <span className={"font-bold uppercase text-secondary"}>developper full stack</span>
-                    <div className={"flex w-full gap-2 "}>
+                    <div className={"flex space-x-2 "}>
                         <Button outline={true}
-                                className={"flex bg-transparent hover:bg-secondary text-secondary hover:text-white border-gray-200 hover:border-secondary border-2 text-lg leading-6 font-semibold py-2 px-2 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
+                                className={"w-full sm:w-auto flex-none bg-transparent hover:bg-secondary text-secondary hover:text-white border-gray-200 hover:border-secondary border-2 text-lg leading-6 font-semibold py-2 px-2 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
                             <div className={"uppercase tracking-wide font-bold text-xs flex flex-grow space-x-2"}>
                                 <Logos.Github
                                     className="w-4 h-4 "/>
@@ -572,28 +596,28 @@ function App() {
                             </div>
                         </Button>
                         <Button outline={true}
-                                className={"flex items-center justify-center bg-transparent hover:bg-secondary text-secondary hover:text-white border-gray-200 hover:border-secondary border-2 text-lg leading-6 font-semibold py-2 px-2 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
+                                className={"w-full sm:w-auto flex-none bg-transparent hover:bg-secondary text-secondary hover:text-white border-gray-200 hover:border-secondary border-2 text-lg leading-6 font-semibold py-2 px-2 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
                             <div className={"uppercase tracking-wide font-bold text-xs flex flex-grow space-x-2"}>
                                 <Logos.Linkedin
                                     className="w-4 h-4 "/>
                             </div>
                         </Button>
                         <Button outline={true}
-                                className={"flex items-center justify-center bg-transparent hover:bg-secondary text-secondary hover:text-white border-gray-200 hover:border-secondary border-2 text-lg leading-6 font-semibold py-2 px-2 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
+                                className={"w-full sm:w-auto flex-none bg-transparent hover:bg-secondary text-secondary hover:text-white border-gray-200 hover:border-secondary border-2 text-lg leading-6 font-semibold py-2 px-2 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
                             <div className={"uppercase tracking-wide font-bold text-xs flex flex-grow space-x-2"}>
                                 <Logos.LogoDev
                                     className="w-4 h-4 "/>
                             </div>
                         </Button>
                         <Button outline={true}
-                                className={" flex items-center justify-center bg-transparent hover:bg-secondary text-secondary hover:text-white border-gray-200 hover:border-secondary border-2 text-lg leading-6 font-semibold py-2 px-2 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
+                                className={"w-full sm:w-auto flex-none bg-transparent hover:bg-secondary text-secondary hover:text-white border-gray-200 hover:border-secondary border-2 text-lg leading-6 font-semibold py-2 px-2 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
                             <div className={"uppercase tracking-wide font-bold text-xs flex flex-grow space-x-2"}>
                                 <Logos.Instagram
                                     className="w-4 h-4 "/>
                             </div>
                         </Button>
                         <Button outline={true}
-                                className={"flex items-center justify-center bg-transparent hover:bg-secondary text-secondary hover:text-white border-gray-200 hover:border-secondary border-2 text-lg font-semibold py-2 px-2 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
+                                className={"w-full sm:w-auto flex-none bg-transparent hover:bg-secondary text-secondary hover:text-white border-gray-200 hover:border-secondary border-2 text-lg font-semibold py-2 px-2 rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary focus:outline-none transition-colors duration-200"}>
                             <div className={"uppercase tracking-wide font-bold text-xs flex flex-grow space-x-2"}>
                                 <Logos.Twitter
                                     className="w-4 h-4 "/>
@@ -601,8 +625,7 @@ function App() {
                         </Button>
                     </div>
                     <hr className={"border-gray-200 border-1"}></hr>
-                    <span className={"text-secondary text-secondary"}>© {date} developed whith <span
-                        className={"text-red-600"}>❤</span>  by Damien Chapart</span>
+                    <span className={"text-secondary text-secondary"}>© {date} developed whith <span className={"text-red-600"}>❤</span>  by Damien Chapart</span>
                     <div className={"flex flex-row space-x-1 items-center"}>
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -614,26 +637,6 @@ function App() {
                     </div>
 
 
-                </div>
-                <div className={"flex flex-row justify-between items-center lg:w-1/3"}>
-                    <div className={"flex flex-col  items-center"}>
-                        <span className={"font-black text-xl m-0 pb-4"}>Navigation</span>
-                        <div className={"flex flex-col space-y-2 text-center text-secondary"}>
-                            <span>Home</span>
-                            <span>About</span>
-                            <span>Portfolio</span>
-                            <span>Contact</span>
-                        </div>
-                    </div>
-                    <div className={"flex flex-col items-end"}>
-                        <span className={"font-black text-xl m-0 pb-4 "}>Legal</span>
-                        <div className={"flex flex-col space-y-2 text-end text-secondary"}>
-                            <span>Privacy</span>
-                            <span>Terms</span>
-                            <span>Accessibility</span>
-                            <span>Site map</span>
-                        </div>
-                    </div>
                 </div>
 
             </footer>
