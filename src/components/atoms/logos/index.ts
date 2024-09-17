@@ -17,9 +17,9 @@ import Linkedin from "components/atoms/logos/linkedin.tsx";
 
 
 export interface LogosProps {
-  width?: number | string;
-  height?: number | string;
-  className?: string;
+    width?: number | string,
+    height?: number | string,
+    className?: string,
 }
 
 const Logos = {

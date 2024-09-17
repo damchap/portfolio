@@ -12,6 +12,7 @@ import FinancialGrowth from "components/atoms/figure/Financial-growth.tsx";
 import GoodRating from "components/atoms/figure/Good-Rating.tsx";
 import Growth from "components/atoms/figure/Growth.tsx";
 import HiFive from "components/atoms/figure/hi-five.tsx";
+import Competence from "components/atoms/figure/Competence.tsx";
 
 
 
@@ -37,6 +38,7 @@ const Figure = {
     GoodRating,
     Growth,
     HiFive,
+    Competence
 
 };
 

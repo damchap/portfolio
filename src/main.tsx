@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import ContactPage from "app/contact";
 import "./index.css";
 import App from "app/app";
 import AboutPage from "app/about";
@@ -8,9 +9,8 @@ import {ComponentPreviews, useInitial} from "./dev";
 import {
     createBrowserRouter,
     RouterProvider,
-    Route,
-    Link,
 } from "react-router-dom";
+import ProjectsPage from "app/projects";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +22,14 @@ const router = createBrowserRouter([
     {
         path: "about",
         element: <AboutPage/>,
+    },
+    {
+        path: "projects",
+        element: <ProjectsPage/>,
+    },
+    {
+        path: "contact",
+        element: <ContactPage/>,
     },
 ]);
 createRoot(document.getElementById("root")!).render(

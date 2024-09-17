@@ -183,7 +183,7 @@ function App() {
                         <a className="group my-4 flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-101 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
                            href="/blog/core-web-vitals">
                             <li className="py-4">
-                                <article className={"flex flex-grow justify-start space-x-8"}>
+                                <article className={"flex flex-grow justify-start space-x-0 lg:space-x-8"}>
                                     <div className={"flex flex-col justify-center"}>
                                         <Figure.Congratulations className={"w-24 h-24"}/>
                                     </div>
@@ -241,7 +241,7 @@ function App() {
                         <a className="group my-4 flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-101 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
                            href="/blog/core-web-vitals">
                             <li className="py-4">
-                                <article className={"flex flex-grow justify-start space-x-8"}>
+                                <article className={"flex flex-grow justify-start lg:space-x-8"}>
                                     <div className={"flex flex-col justify-center"}>
                                         <Figure.CodingScript className={"w-24 h-24"}/>
                                     </div>
