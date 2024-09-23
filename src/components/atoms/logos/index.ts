@@ -14,7 +14,8 @@ import LogoDev from "components/atoms/logos/logodev.tsx";
 import Instagram from "components/atoms/logos/instagram.tsx";
 import Twitter from "components/atoms/logos/twitter.tsx";
 import Linkedin from "components/atoms/logos/linkedin.tsx";
-
+import Moon from "components/atoms/logos/moon.tsx";
+import Sun from "components/atoms/logos/sun.tsx";
 
 export interface LogosProps {
     width?: number | string,
@@ -39,6 +40,8 @@ const Logos = {
   Instagram,
   Twitter,
   Linkedin,
+  Moon,
+  Sun
 };
 
 export default Logos;

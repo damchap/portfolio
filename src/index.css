@@ -5,10 +5,23 @@
 @tailwind utilities;
 
 @layer base {
+  
   html {
+    --bg-color: theme('colors.backgroundColor.light');
+    --text-color: theme('colors.textColor.light');
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: Inter, system-ui, sans-serif;
     font-weight: 500;
   }
+}
+/* Ajoutez vos styles de mode sombre ici */
+.dark {
+  --bg-color: theme('colors.backgroundColor.dark');
+  --text-color: theme('colors.textColor.dark');
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }

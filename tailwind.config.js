@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: 'selector', 
     content: ["./src/**/*.tsx", "./src/**/*.css"],
     plugins: [require("@tailwindcss/forms")],
     theme: {
@@ -40,6 +41,14 @@ module.exports = {
                 'primary-dark': '#1961BC',
                 'default': '#0F172A',
                 'secondary': '#64748B',
+                backgroundColor: {
+                    'dark': '#111827',
+                    'light': '#FFFFFF',
+                },
+                textColor: {
+                    'dark': '#1a1a1a',
+                    'light': '#0F172A',
+                },
             },
             spacing: {
                 '4.5': '1.125rem',
@@ -65,6 +74,7 @@ module.exports = {
                 '100': '100',
                 '200': '200',
             },
+            
         }
     }
 };
