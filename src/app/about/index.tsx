@@ -1,4 +1,4 @@
-import GitHubCalendar, { ThemeInput } from 'react-github-calendar';
+import GitHubCalendar from 'react-github-calendar';
 import Navbar from "components/organisms/navbar";
 import Figure from "components/atoms/figure";
 import { useEffect, useState } from 'react';
@@ -26,7 +26,7 @@ interface Education {
   endDate: string;
 }
 
-const explicitTheme: ThemeInput = {
+const explicitTheme = {
   light: ['#EEEEEE', '#4DE6FF', '#33CCFF', '#0099F2', '#007AC2'],
   dark: ['#BBBBBB', '#3AA2BF', '#2999CC', '#0077BA', '#005E91']
 };
